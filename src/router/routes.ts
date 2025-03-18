@@ -50,7 +50,7 @@ export const constantRoute = [
     component: () => import('@/views/screen/index.vue'),
     name: 'Screen',
     meta: {
-      hidden: false,
+      hidden: true,
       title: '数据大屏',
       icon: 'Platform',
     },
@@ -103,14 +103,14 @@ export const constantRoute = [
       title: '商品管理',
       icon: 'Goods',
     },
-    redirect: '/product/trademark',
+    redirect: '/product/companyList',
     children: [
       {
-        path: '/product/trademark',
-        component: () => import('@/views/product/trademark/index.vue'),
-        name: 'Trademark',
+        path: '/product/companyList',
+        component: () => import('@/views/product/companyList/index.vue'),
+        name: 'companyList',
         meta: {
-          title: '品牌管理',
+          title: '公司',
           icon: 'ShoppingCartFull',
         },
       },

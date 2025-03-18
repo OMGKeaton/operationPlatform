@@ -10,6 +10,5 @@
 .box {
   width: 100%;
   height: 4000px;
-  background: red;
 }
 </style>

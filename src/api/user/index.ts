@@ -3,7 +3,7 @@ import request from '@/utils/request'
 import type { loginForm, loginResponseData, userResponseData } from './type'
 //统一管理接口
 enum API {
-  LOGIN_URL = '/user/login',
+  LOGIN_URL = '/api/user/login',
   USERINFO_URL = '/user/info',
 }
 //暴露请求函数

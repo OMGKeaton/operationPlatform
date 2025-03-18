@@ -13,13 +13,13 @@
   ></el-button>
   <el-button size="small" icon="Setting" circle></el-button>
   <img
-    :src="userStore.avatar"
+    src="../../../assets/image.png"
     style="width: 24px; height: 24px; margin: 0px 10px; border-radius: 50%"
   />
   <!-- 下拉菜单 -->
   <el-dropdown>
     <span class="el-dropdown-link">
-      {{ userStore.username }}
+      {{ 'admin' }}
       <el-icon class="el-icon--right">
         <arrow-down />
       </el-icon>

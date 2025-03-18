@@ -20,7 +20,7 @@ router.beforeEach(async (to: any, from: any, next: any) => {
   //获取token,去判断用户登录、还是未登录
   let token = userStore.token
   //获取用户名字
-  let username = userStore.username
+  let username = 'admin'
   //用户登录判断
   if (token) {
     //登录成功,访问login,不能访问,指向首页
@@ -29,15 +29,12 @@ router.beforeEach(async (to: any, from: any, next: any) => {
     } else {
       //登录成功访问其余六个路由(登录排除)
       //有用户信息
-      if (username) {
+      if (true) {
         //放行
         next()
       } else {
         //如果没有用户信息,在守卫这里发请求获取到了用户信息再放行
         try {
-          //获取用户信息
-          await userStore.userInfo()
-          //放行
           next()
         } catch (error) {
           //token过期:获取不到用户信息了

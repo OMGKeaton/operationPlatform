@@ -10,7 +10,7 @@ interface dataType {
 }
 //登录接口返回数据类型
 export interface loginResponseData {
-  code: number
+  ok: boolean
   data: dataType
 }
 

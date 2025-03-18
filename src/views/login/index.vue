@@ -62,7 +62,7 @@ let $route = useRoute()
 //定义变量控制按钮加载效果
 let loading = ref(false)
 //收集账号与密码的数据
-let loginForm = reactive({ username: 'admin', password: 'atguigu123' })
+let loginForm = reactive({ username: 'test', password: '1234test8765' })
 //登录按钮回调
 const login = async () => {
   //保证全部表单相校验通过再发请求
@@ -104,10 +104,10 @@ const validatorUserName = (rule: any, value: any, callback: any) => {
   //value:即为表单元素文本内容
   //函数:如果符合条件callBack放行通过即为
   //如果不符合条件callBack方法,注入错误提示信息
-  if (value.length >= 5) {
+  if (value.length >= 4) {
     callback()
   } else {
-    callback(new Error('账号长度至少五位'))
+    callback(new Error('账号长度至少4位'))
   }
 }
 

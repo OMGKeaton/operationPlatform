@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-import { TradeMarkResponseData } from './type'
+import { TradeMark, TradeMarkResponseData } from './type'
 
 enum API {
   TRADEMARK_URL = '/admin/product/baseTrademark/',
@@ -16,7 +16,7 @@ export const reqHasTrademark = (page: number, limit: number) =>
     API.TRADEMARK_URL + `${page}/${limit}`,
   )
 
-export const reqAddOrUpdateTrademark = (data: any) => {
+export const reqAddOrUpdateTrademark = (data: TradeMark) => {
   if (data.id) {
     // 编辑
     return request.post<any, any>(API.ADDTRADEMARK_URL, data)
